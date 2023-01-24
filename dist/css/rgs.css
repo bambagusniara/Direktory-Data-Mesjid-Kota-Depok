@@ -1,0 +1,79 @@
+
+.container{
+    width: 100%;
+}
+h2 {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.logo{
+    margin-top: 20px;
+}
+
+.navbar{
+    margin: 20px;
+    display: flex;
+    position: relative;
+}
+.login{
+    position: absolute;right: 0;
+}
+
+ol.breadcrumb {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li,
+a {
+    text-decoration: none;
+    list-style-type: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+#form {
+    padding: 8px;
+    margin-left: 10px;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+.fieldset {
+    width: 100%;
+    border:  solid 1px black;
+    border-radius: 8px;
+    background-color: whitesmoke;
+}
+
+
+hr {
+    border: 2px solid black;
+    font-weight: 200px;
+}
+
+strong {
+    padding-left: 25px;
+
+}
+
+.container-fluid .row .col-md-12 {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+}
+
+h4{
+    margin-left: 25px;
+}
+
+.right{
+   margin-right: 40px;
+}
+table{width: 100%;max-width: 600px;}
+tr+tr{border-top: white solid;}

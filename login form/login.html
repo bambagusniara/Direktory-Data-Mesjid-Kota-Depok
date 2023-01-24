@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Login 10</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="img js-fullheight" style="background-image: url(images/spud.jpg);">
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-4">
+					<div class="login-wrap p-0">
+						<h2 style="color: white;" class="mb-4 text-center"><b>Login Sistem <br> Direktori Data
+								Masjid</b></h2>
+						<form class="signin-form" onsubmit="login()">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Username" required id="uname">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" placeholder="Password" required id="pswrd">
+								<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"
+									id="passowrd-toggle"></span>
+							</div>
+							<div class="form-group">
+								<button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
+							</div>
+							<div class="form-group d-md-flex">
+								<div class="w-50 text-md-left">
+									<a href="#" style="color: pink">Forgot Password</a>
+								</div>
+								<div class="w-50 text-md-right">
+									<a href="registrasi-user.html" style="color: #fff">Create User</a>
+								</div>
+							</div>
+						</form>
+						<p class="w-100 text-center">&mdash; Or Sign In With &mdash;</p>
+						<div class="social d-flex text-center">
+							<a href="https://accounts.google.com/v3/signin/identifier?dsh=S151591769%3A1674449537257147&hl=id&flowName=GlifWebSignIn&flowEntry=ServiceLogin&ifkv=AWnogHfr0xiHuDpc1eeCACpwrL4dFdFNqCs1iboUW6uc_E0DP5xykj6VTYJrVgP_JIXV5S7N6b9Z"
+								class="px-2 py-2 mr-md-1 rounded"><span class="ion-logo-facebook mr-2"></span> Google
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+
+
+	<footer
+		style="width: auto; height: 90px; margin-top: 110px; text-align: center; padding-top: 20px; color: white; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; background-color: rgb(98, 110, 131);">
+		Develop By:
+		Mahasiswa STT NF 2022</footer>
+
+	<script src="plugins/jquery/jquery.min.js"></script>
+	<!-- Bootstrap 4 -->
+	<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<!-- AdminLTE App -->
+	<script src="dist/js/adminlte.min.js"></script>
+	<script>
+		const pswrdField = document.getElementById("pswrd");
+		const passowrdToggle = document.getElementById("passowrd-toggle");
+
+		passowrdToggle.addEventListener("click", function () {
+			if (pswrdField.type == "password") {
+				pswrdField.type = "text"
+			}
+			else {
+				pswrdField.type = "password"
+			}
+		})
+
+		function login() {
+			event.preventDefault();
+			pswrd = document.getElementById("pswrd").value;
+			uname = document.getElementById("uname").value;
+
+
+			if (uname == "admin" && pswrd == "admin123") {
+				window.alert("Login sukses");
+				window.location = ("../tbl-berita.html");
+			} else {
+				event.preventDefault();
+				window.alert("gagal");
+			}
+		}
+	</script>
+</body>
+
+</html>
